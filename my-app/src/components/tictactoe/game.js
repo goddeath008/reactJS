@@ -76,9 +76,13 @@ const Game = () => {
     return (
         <div>
             <Board cells={state.board} onClick={HandleClick}></Board>
-            {winner &&<div className='game-winner'>
-               Winner is {winner}
-               </div>}
+            {winner &&
+                <div className='game-winner'>
+                    <div className='winner-text'>
+                        Winner is {winner}
+                    </div>
+                </div>
+            }
             <button className='buton' onClick={HandleResetGame}>Reset Game</button>
 
         </div>
